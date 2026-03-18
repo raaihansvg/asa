@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int ukuran_papan;
+vector<vector<char>> papan;
+
+bool apakah_aman(int baris, int kolom) {
+    for (int i = 0; i < baris; i++) {
+        if (papan[i][kolom] == 'Q') return false;
+    }
+
+  
+    for (int i = baris, j = kolom; i >= 0 && j >= 0; i--, j--) {
+        if (papan[i][j] == 'Q') return false;
+    }
+
+
+    for (int i = baris, j = kolom; i >= 0 && j < ukuran_papan; i--, j++) {
+        if (papan[i][j] == 'Q') return false;
+    }
+
+    return true;
+}
+
+bool selesaikan_ratu(int baris) {
+    if (baris >= ukuran_papan) return true;
+
+    for (int kolom = 0; kolom < ukuran_papan; kolom++) {
+        if (apakah_aman(baris, kolom)) {
+            papan[baris][kolom] = 'Q';
+
+            if (selesaikan_ratu(baris + 1)) return true;
+
+            papan[baris][kolom] = '.';
+        }
+    }
+    return false;
+}
+
+int main() {
+    if (!(cin >> ukuran_papan)) return 0;
+
+    papan.assign(ukuran_papan, vector<char>(ukuran_papan, '.'));
+
+    if (selesaikan_ratu(0)) {
+        for (int i = 0; i < ukuran_papan; i++) {
+            for (int j = 0; j < ukuran_papan; j++) {
+                cout << papan[i][j];
+            }
+        }
+        cout << endl;
+    } else {
+        cout << "Kerajaan tidak dapat dilindungi!" << endl;
+    }
+
+    return 0;
+}
