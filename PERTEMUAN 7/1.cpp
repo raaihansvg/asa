@@ -1,27 +1,26 @@
-#include <cmath>
-#include <cstdio>
-#include <vector>
 #include <iostream>
-#include <algorithm>
+#include <vector>
 #include <map>
+#include <algorithm>
 using namespace std;
-/* NAMA : RAIHAN LAZUARDI */
-/* NIM : 24060124140178*/
-/* KELAS : B*/
+
 map<char, vector<char>> petaLorong;
-map<char, bool>sudahDikunjungi;
-vector<char>urutanKunjungan;
+map<char, bool>         sudahDikunjungi;
+vector<char>            urutanKunjungan;
 
 void algoritmaaDFS(char ruanganSekarang) {
     sudahDikunjungi[ruanganSekarang] = true;
     urutanKunjungan.push_back(ruanganSekarang);
 
+    // Tetangga sudah terurut abjad, langsung iterasi
     for (char tetangga : petaLorong[ruanganSekarang]) {
         if (!sudahDikunjungi[tetangga]) {
             algoritmaaDFS(tetangga);
         }
     }
+    // Jalan buntu → rekursi selesai → otomatis backtrack ke caller
 }
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -38,6 +37,7 @@ int main() {
         petaLorong[dari].push_back(ke);
     }
 
+    // Sort tetangga tiap ruangan secara abjad A→Z
     for (auto& [ruangan, listTetangga] : petaLorong) {
         sort(listTetangga.begin(), listTetangga.end());
     }
