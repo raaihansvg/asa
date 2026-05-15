@@ -1,0 +1,47 @@
+Pada suatu hari banyak devil yang muncul di berbagai lokasi kota. Denji sebagai devil hunter harus mengalahkan devil sebanyak mungkin.
+
+Setiap devil memiliki posisi tertentu dalam sebuah barisan. Denji hanya dapat mengalahkan devil yang berada dalam jarak k dari posisinya saat ini. Selain itu:
+
+    Satu devil hanya bisa dikalahkan satu kali
+    Denji hanya bisa menangani satu devil dalam satu waktu
+
+Bantulah Denji menentukan jumlah maksimum devil yang dapat dikalahkan menggunakan strategi greedy.
+
+Input Format
+
+    P = Devil Hunter (Denji)
+    T = Devil
+    k = jangkauan Denji
+    Greedy = pilih devil terdekat yang belum dikalahkan
+
+Constraints
+
+    1 ≤ N ≤ 100
+    1 ≤ K ≤ N
+    Array hanya berisi karakter:
+    P = Devil Hunter
+    T = Devil
+    Setiap Devil hanya dapat dikalahkan satu kali
+    Setiap Hunter hanya dapat mengalahkan satu Devil
+    Hunter hanya dapat mengalahkan Devil dalam jarak maksimal K
+
+Output Format
+
+Tampilkan sebuah bilangan bulat yang menyatakan jumlah maksimum Devil yang dapat dikalahkan oleh para Hunter.
+
+Sample Input 0
+
+5 1
+P T T P T
+
+Sample Output 0
+
+2
+
+Sample Input 1
+
+3 1
+P T P
+
+Sample Output 1
+
