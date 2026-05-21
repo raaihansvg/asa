@@ -1,0 +1,44 @@
+
+Mengamankan Dolar di Gudang Pelabuhan
+
+    Problem
+    Submissions
+    Leaderboard
+    Discussions
+
+Setelah sukses membantu Pak Joko di kebun singkong, kabar tentang keahlianmu menyebar. Kali ini, seorang kepala desa tetangga meminta bantuanmu. Di sebuah gudang tua dekat pelabuhan, ditemukan jenis koper berisi uang dolar yang ditinggalkan oleh kapal penyelundup.
+
+Kombinasi koper di gudang ini sangat unik. Jumlah koper untuk setiap jenisnya sangat banyak dan tidak terbatas, sehingga kamu bisa mengambil koper dari jenis yang sama sebanyak beberapa kali (misalnya, mengambil 3 buah koper jenis A sekaligus).
+
+Sama seperti sebelumnya, warga desa hanya menyediakan satu gerobak dengan kapasitas berat maksimal W kg. Setiap jenis koper ke-i memiliki berat w_i kg dan nilai dolar sebesar v_i. Koper tidak bisa dibongkar di tempat, jadi harus diangkut utuh. Bantu warga desa menentukan total nilai dolar maksimum yang bisa diangkut dengan gerobak tersebut!
+
+Input Format
+
+    Baris pertama berisi dua buah bilangan bulat N dan W, menyatakan jumlah jenis koper dan kapasitas maksimal gerobak.
+    Baris kedua berisi N buah bilangan bulat yang menyatakan berat masing-masing jenis koper (w_1, w_2, ..., w_N).
+    Baris ketiga berisi buah bilangan bulat yang menyatakan nilai dolar dari masing-masing jenis koper (v_1, v_2, ..., v_N).
+
+Constraints
+
+    1 <= N <= 1000
+    1 <= W <= 1000
+    1 <= w_i <= W
+    1 <= v_i <= 10^6
+
+Output Format
+
+Sebuah bilangan bulat yang menyatakan total nilai dolar maksimum yang dapat diangkut ke dalam gerobak.
+
+Sample Input 0
+
+3 9
+3 4 5
+3000 4000 4500
+
+Sample Output 0
+
+9000
+
+Explanation 0
+
+Mengambil 3 buah koper jenis pertama (3 x 3 = 9 kg) menghasilkan 9000. Nilai ini sama dengan jika mengambil koper jenis kedua (4 kg) digabung jenis ketiga (5 kg), yaitu 44500 = 8500. Pilihan pertama tetap yang terbaik.
