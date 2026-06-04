@@ -1,0 +1,34 @@
+Terdapat N pesanan makanan khusus dari kelompok bajak laut di restoran Baratie. Setiap pesanan ke-i memiliki waktu mulai memasak (s_i), waktu selesai(f_i), dan keuntungan (v_i Belly).
+
+Sanji hanya bisa memasak satu pesanan dalam satu waktu. Jika ia mengambil sebuah pesanan, ia tidak bisa mengambil pesanan lain yang waktunya bertabrakan atau tumpang tindih. Sanji baru bisa mulai memasak pesanan berikutnya tepat pada saat atau setelah waktu selesai pesanan sebelumnya (s_next >= f_prev).
+
+Gunakan pendekatan Dynamic Programming untuk menentukan total keuntungan Belly maksimum yang bisa didapatkan oleh Baratie tanpa ada jadwal memasak yang bentrok!
+
+Input Format
+
+    Baris pertama berisi satu bilangan bulat N, yang menyatakan jumlah pesanan yang masuk.
+    N baris berikutnya masing-masing berisi tiga buah bilangan bulat: s_i, f_i, dan v_i, yang secara berturut-turut menyatakan waktu mulai, waktu selesai, dan nilai bayaran Belly dari pesanan tersebut.
+
+Constraints
+
+    1 <= N <= 1000
+    1 <= s_i <= f_i <= 10^5
+    1 <= v_i <= 10^6
+
+Output Format
+
+Sebuah bilangan bulat yang menyatakan total keuntungan Belly maksimum yang bisa didapatkan oleh Baratie.
+
+Sample Input 0
+
+2
+1 5 4000
+2 4 6000
+
+Sample Output 0
+
+6000
+
+Explanation 0
+
+Pesanan kedua [2, 4] berada di dalam rentang waktu pesanan pertama [1, 5]. Karena bentrok, Sanji harus memilih salah satu yang memberikan Belly paling besar, yaitu pesanan kedua ($6000).
