@@ -1,5 +1,14 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
 #include <bits/stdc++.h>
 using namespace std;
+
+// Nama : Raihan Lazuardi
+// NIM  : 24060124140178
+// Lab  : B2
 
 int main() {
     int n;
