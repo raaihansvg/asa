@@ -1,0 +1,61 @@
+Setelah insiden bentrokan besar antara siswa Furin dan beberapa kelompok berandalan dari wilayah lain, muncul informasi bahwa sejumlah kelompok lawan berencana membuat kerusuhan secara bersamaan di beberapa titik kota. Sebagai salah satu petarung terkuat Furin, Haruka Sakura ditugaskan untuk mengunjungi setiap lokasi yang dilaporkan menjadi titik kumpul lawan.
+
+Karena waktu sangat terbatas dan kerusuhan dapat terjadi kapan saja, Sakura harus menentukan rute perjalanan yang paling efisien agar dapat mendatangi seluruh lokasi, memastikan keadaan aman, dan kembali ke markas Furin secepat mungkin.
+
+Terdapat enam lokasi yang harus dikunjungi:
+
+    A = Markas Furin (titik awal dan akhir)
+    B = Distrik Perbelanjaan Timur
+    C = Jembatan Kyujo
+    D = Taman Minami
+    E = Gudang Pelabuhan
+    F = Terminal Bus Lama
+
+Bantulah Sakura menentukan rute untuk mengamankan wilayah Furin dengan Algoritma Branch and Bound
+
+Input Format
+
+    Baris pertama berisi angka 6, yaitu jumlah lokasi.
+    Baris kedua berisi lokasi awal, yaitu A.
+    Baris berikutnya berisi matriks waktu tempuh antar lokasi.
+
+Constraints
+
+    Jumlah lokasi tetap, yaitu 6 lokasi
+    Lokasi yang digunakan adalah A, B, C, D, E, F
+    Sakura selalu mulai dari A
+    Sakura harus kembali lagi ke A
+    Setiap lokasi hanya boleh dikunjungi satu kali
+    Waktu tempuh antar lokasi berupa bilangan bulat positif
+    Nilai dari lokasi ke dirinya sendiri adalah 0
+
+Output Format
+
+    Cetak rute tercepat yang harus dilalui Sakura.
+    Cetak total waktu tempuh minimum.
+
+Sample Input 0
+
+3
+0 5 9
+5 0 4
+9 4 0
+
+Sample Output 0
+
+A B C A
+18
+
+Sample Input 1
+
+4
+0 4 8 6
+4 0 5 7
+8 5 0 3
+6 7 3 0
+
+Sample Output 1
+
+A B C D A
+18
+
