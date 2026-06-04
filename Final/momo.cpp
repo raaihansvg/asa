@@ -33,7 +33,6 @@ int main() {
             kanan = tengah - 1;
         }
     }
-
     if (hasilIndeks != -1)
         cout << "Energi ditemukan di indeks " << hasilIndeks << endl;
     else
