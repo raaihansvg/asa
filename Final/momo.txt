@@ -1,0 +1,43 @@
+Momo dan Okarun sedang menyelidiki kemunculan energi aneh milik Turbo Granny. Mereka memiliki daftar tingkat energi spiritual dari beberapa lokasi. Daftar tersebut sudah diurutkan dari energi terkecil sampai terbesar.
+
+Karena datanya sudah terurut, Momo tidak perlu memeriksa lokasi satu per satu. Ia menggunakan algoritma Binary Search, yaitu contoh dari Decrease and Conquer, karena setiap langkah pencarian mengurangi jumlah data menjadi setengah.
+
+Input Format
+
+    Baris pertama berisi integer N
+    Baris kedua berisi N angka energi spiritual yang sudah terurut
+    Baris ketiga berisi angka target yang dicari
+
+Constraints
+
+    1 ≤ N ≤ 100
+    1 ≤ energi ≤ 1000
+    Data energi sudah terurut menaik
+
+Output Format
+
+    Jika ditemukan:
+    Energi ditemukan di indeks X
+    Jika tidak ditemukan:
+    Energi tidak ditemukan
+
+Sample Input 0
+
+7
+6 12 18 24 30 36 42
+42
+
+Sample Output 0
+
+Energi ditemukan di indeks 6
+
+Sample Input 1
+
+5
+100 200 300 400 500
+300
+
+Sample Output 1
+
+Energi ditemukan di indeks 2
+
